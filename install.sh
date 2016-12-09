@@ -52,5 +52,11 @@ EOF
 # Make them all executable
 sudo chmod +x LCD.desktop HDMI.desktop keyboard.desktop
 
+# We need to fix the Osoyoo Scripts a bit, now the only work locally
+# We will add path to the beginning 
+cd /home/pi/LCD_show_v6_1_3
+echo 'cd /home/pi/LCD_show_v6_1_3' | cat - ./LCD35_v > temp && mv temp ./LCD35_v
+echo 'cd /home/pi/LCD_show_v6_1_3' | cat - ./LCD_hdmi > temp && mv temp ./LCD_hdmi
+
 echo "All done, baby! Let's reboot and start the LCD"
 sudo /home/pi/LCD_show_v6_1_3/LCD35_v
