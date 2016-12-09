@@ -52,7 +52,5 @@ EOF
 # Make them all executable
 sudo chmod +x LCD.desktop HDMI.desktop keyboard.desktop
 
-echo "All done, baby!"
-echo "Here's a fortune for your patience:"
-echo ""
-fortune
+echo "All done, baby! Let's reboot and start the LCD"
+sudo /home/pi/LCD_show_v6_1_3/LCD35_v
