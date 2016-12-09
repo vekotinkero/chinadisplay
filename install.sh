@@ -9,6 +9,9 @@ sudo wget http://en.kedei.net/raspberry/v6_1/LCD_show_v6_1_3.tar.gz
 sudo tar xzvf LCD_show_v6_1_3.tar.gz
 sudo rm LCD_show_v6_1_3.tar.gz
 
+# Change rights
+sudo chmod 666 LCD35_v LCD_hdmi
+
 echo "Downloading some additional packages..."
 sudo apt-get install -y matchbox-keyboard fortune cmatrix autoconf
 
@@ -57,8 +60,8 @@ sudo chmod +x LCD.desktop HDMI.desktop keyboard.desktop
 # We need to fix the Osoyoo Scripts a bit, now the only work locally
 # We will add path to the beginning 
 cd /home/pi/LCD_show_v6_1_3
-echo $'echo \"Rebooting to LCD!\"\ncd /home/pi/LCD_show_v6_1_3' | cat - ./LCD35_v > temp && mv temp ./LCD35_v
-echo $'echo \"Rebooting to HDMI!\"\ncd /home/pi/LCD_show_v6_1_3' | cat - ./LCD_hdmi > temp && mv temp ./LCD_hdmi
+echo $'echo Rebooting to LCD in a moment, just wait...!\ncd /home/pi/LCD_show_v6_1_3' | cat - ./LCD35_v > temp && mv temp ./LCD35_v
+echo $'echo Rebooting to HDMI in a moment, just wait...!\ncd /home/pi/LCD_show_v6_1_3' | cat - ./LCD_hdmi > temp && mv temp ./LCD_hdmi
 
 echo "All done, baby! Let's reboot and start the LCD"
 ./LCD35_v
