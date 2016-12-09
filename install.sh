@@ -10,7 +10,7 @@ sudo tar xzvf LCD_show_v6_1_3.tar.gz
 sudo rm LCD_show_v6_1_3.tar.gz
 
 # Change rights
-sudo chmod 666 LCD35_v LCD_hdmi
+sudo chmod 777 LCD35_v LCD_hdmi
 
 echo "Downloading some additional packages..."
 sudo apt-get install -y matchbox-keyboard fortune cmatrix autoconf
